@@ -6,7 +6,7 @@ from flask import Flask, request
 # create instance Flask
 app = Flask(__name__)
 
-# get page
+# post info
 @app.route('/', methods=['POST'])
 def ask_info():
     data = request.json
@@ -15,7 +15,7 @@ def ask_info():
     return 'Done!'
 
 
-# post info
+# get page
 @app.route('/api/info', methods=['GET'])
 def get_info():
     data = request.json
